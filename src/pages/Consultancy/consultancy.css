@@ -1,0 +1,59 @@
+.con-dashboard, 
+.con-services, 
+.con-details, 
+.con-enquiry {
+  padding: 20px;
+}
+
+.con-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.con-card {
+  width: 260px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.con-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 260px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.btn, .btn2 {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+}
+
+.btn2 {
+  background: #ddd;
+  color: black;
+}

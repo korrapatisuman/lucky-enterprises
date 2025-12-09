@@ -1,0 +1,35 @@
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+.footer-row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.site-footer h4, .site-footer h5 {
+  margin: 0 0 8px 0;
+}
+
+.copyright {
+  margin-top: 18px;
+  color: #888;
+  font-size: 13px;
+}

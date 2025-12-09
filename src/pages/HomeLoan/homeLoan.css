@@ -1,0 +1,48 @@
+.home-dashboard {
+  padding: 20px;
+}
+
+.home-dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hl-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  width: 250px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.hl-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Forms */
+.loan-form, .loan-calculator, .loan-list, .loan-status {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.loan-form form input,
+.loan-form form select,
+.loan-calculator input,
+.loan-status input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #3a7afe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

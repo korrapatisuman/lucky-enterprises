@@ -1,0 +1,64 @@
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vehicle-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.vehicle-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.vehicle-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary {
+  background: #007bff;
+}
+
+.btn-secondary {
+  background: #555;
+}
+
+.vehicle-form-container {
+  width: 450px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.vehicle-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.vehicle-details {
+  width: 450px;
+  margin: 20px auto;
+  text-align: center;
+}

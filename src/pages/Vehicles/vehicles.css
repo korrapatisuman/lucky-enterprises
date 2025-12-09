@@ -1,0 +1,49 @@
+.veh-dashboard {
+  padding: 20px;
+}
+
+.veh-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.veh-card {
+  width: 240px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+.veh-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.vehicle-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.vehicle-card {
+  width: 260px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.vehicle-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.veh-details img {
+  width: 300px;
+  border-radius: 10px;
+}
