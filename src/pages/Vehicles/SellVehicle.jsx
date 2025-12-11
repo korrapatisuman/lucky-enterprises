@@ -24,27 +24,41 @@ function SellVehicle() {
     <div className="sell-container">
       <h2>Sell Your Vehicle</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form className="sell-form" onSubmit={handleSubmit}>
+        
+        <div>
+          <label>Owner Name</label>
+          <input name="owner" onChange={handleChange} required />
+        </div>
 
-        <label>Owner Name</label>
-        <input name="owner" onChange={handleChange} required />
+        <div>
+          <label>Phone</label>
+          <input name="phone" onChange={handleChange} required />
+        </div>
 
-        <label>Phone</label>
-        <input name="phone" onChange={handleChange} required />
+        <div>
+          <label>Brand</label>
+          <input name="brand" onChange={handleChange} required />
+        </div>
 
-        <label>Brand</label>
-        <input name="brand" onChange={handleChange} required />
+        <div>
+          <label>Model</label>
+          <input name="model" onChange={handleChange} required />
+        </div>
 
-        <label>Model</label>
-        <input name="model" onChange={handleChange} required />
+        <div>
+          <label>Manufacturing Year</label>
+          <input name="year" onChange={handleChange} required />
+        </div>
 
-        <label>Manufacturing Year</label>
-        <input name="year" onChange={handleChange} required />
+        <div>
+          <label>Expected Price</label>
+          <input name="price" onChange={handleChange} required />
+        </div>
 
-        <label>Expected Price</label>
-        <input name="price" onChange={handleChange} required />
-
-        <button type="submit">Submit</button>
+        <button type="submit" className="sell-submit-btn">
+          Submit
+        </button>
       </form>
     </div>
   );

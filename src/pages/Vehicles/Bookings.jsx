@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./vehicles.css";
 
 function Bookings() {
   const [formData, setFormData] = useState({
@@ -9,33 +8,63 @@ function Bookings() {
     date: "",
   });
 
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-  function handleSubmit(e) {
+  const submitHandler = (e) => {
     e.preventDefault();
-    alert("Booking Request Submitted!");
-  }
+
+    if (!formData.name || !formData.phone || !formData.vehicle || !formData.date) {
+      alert("All fields are required");
+      return;
+    }
+
+    alert("Booking submitted successfully (mock)");
+  };
 
   return (
     <div className="booking-container">
-      <h2>Vehicle Booking / Enquiry</h2>
+      <h2 className="booking-title">Vehicle Booking / Enquiry</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input name="name" required onChange={handleChange} />
+      <form className="booking-form" onSubmit={submitHandler}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
 
-        <label>Phone</label>
-        <input name="phone" required onChange={handleChange} />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone"
+          value={formData.phone}
+          onChange={handleChange}
+        />
 
-        <label>Vehicle Name</label>
-        <input name="vehicle" required onChange={handleChange} />
+        <input
+          type="text"
+          name="vehicle"
+          placeholder="Vehicle Name"
+          value={formData.vehicle}
+          onChange={handleChange}
+        />
 
-        <label>Preferred Date</label>
-        <input type="date" name="date" required onChange={handleChange} />
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+        />
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="booking-submit-btn">
+          Submit
+        </button>
       </form>
     </div>
   );

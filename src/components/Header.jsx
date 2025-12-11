@@ -1,7 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-function Header() {
+function Header({ user, setUser }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    setUser(null);
+    navigate("/login");
+  };
+
   return (
     <header className="navbar">
       <div className="logo">
@@ -10,17 +18,25 @@ function Header() {
       </div>
 
       <nav>
-        <Link to="/">Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
         <Link to="/vehicles">Vehicles</Link>
         <Link to="/book-trip">Book Trip</Link>
-        <Link to="/bookings">Bookings</Link>
+        <Link to="/vehicles/bookings">Bookings</Link>
         <Link to="/real-estate">Real Estate</Link>
         <Link to="/home-loan">Home Loan</Link>
         <Link to="/vehicles-dashboard">Buy & Sell</Link>
         <Link to="/consultancy">Consultancy</Link>
         <Link to="/contacts">Contacts</Link>
         <Link to="/admin">Admin</Link>
-        <Link className="auth-btn" to="/login">Login</Link>
+
+        {/* AUTH BUTTON */}
+        {!user ? (
+          <Link className="auth-btn" to="/login">Login</Link>
+        ) : (
+          <button className="auth-btn logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
+        )}
       </nav>
     </header>
   );
